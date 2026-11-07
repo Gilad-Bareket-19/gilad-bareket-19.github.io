@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Momiji Japanese</title>
+  <script>
+    var path = window.location.pathname;
+    var hash = window.location.hash || '';
+    var base = 'https://gilad-bareket-19.github.io/momiji-app/';
+    
+    if (path.indexOf('/momiji-app') === 0) {
+      window.location.replace(base + hash);
+    } else if (path.indexOf('/momiji') === 0) {
+      var sub = path.replace(/^\/momiji\/?/, '');
+      if (sub) {
+        hash = '#/' + sub;
+      }
+      window.location.replace(base + hash);
+    } else {
+      var clean = path.replace(/^\//, '');
+      if (clean) hash = '#/' + clean;
+      window.location.replace(base + hash);
+    }
+  </script>
+  <meta http-equiv="refresh" content="0; url=https://gilad-bareket-19.github.io/momiji-app/">
+</head>
+<body style="font-family: system-ui, sans-serif; text-align: center; padding: 40px;">
+  <h2>Redirecting to Momiji Japanese...</h2>
+  <p><a href="https://gilad-bareket-19.github.io/momiji-app/">Click here if you are not redirected automatically</a></p>
+</body>
+</html>
